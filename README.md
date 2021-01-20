@@ -18,10 +18,15 @@ https://grpc.io/docs/languages/go/quickstart/
 
 go mod init philosup/go-with-grpc
 
-go get google.golang.org/protobuf/cmd/protoc-gen-go
-go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
-```
 
+go get google.golang.org/grpc
+# go get google.golang.org/grpc/cmd/protoc-gen-go-grpc
+# go get google.golang.org/protobuf/cmd/protoc-gen-go
+go get github.com/golang/protobuf/protoc-gen-go
+```
+```
+protoc --go_out=plugins=grpc:. helloworld.proto
+```
 ## protoc 설치
 
 ### 윈도우
